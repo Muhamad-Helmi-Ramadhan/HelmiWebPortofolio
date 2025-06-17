@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #F4E1D2;
+      --accent: #D4A373;
+      --text: #5A4636;
+      --bg: #FFF8F0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: var(--accent);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .experience, .gallery {
+      margin-bottom: 3rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--primary);
+      color: var(--text);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+    <audio id="bgmusic" loop>
+    <source src="song/wedding-music.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="document.getElementById('bgmusic').play()">Play Musik</button>
+    <button onclick="document.getElementById('bgmusic').pause()">Pause Musik</button>
+
+  <header>
+    <h1>Crew Wedding Organizer</h1>
+    <p>Spesialis Momen Bahagia Anda</p>
+  </header>
+
+  <nav>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#dokumentasi">Dokumentasi</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="pengalaman" class="experience fade-in">
+    <h2>Pengalaman</h2>
+    <p>
+      Saya telah menjadi wedding organizer sejak tahun 2023 dan telah menangani banyak acara pernikahan dari berbagai tema dan adat. Mulai dari konsep modern, tradisional Jawa, Sunda, Minang. 
+      Fokus saya adalah memastikan bahwa setiap momen istimewa berjalan lancar, penuh kesan, dan sesuai impian klien.
+    </p>
+  </section>
+
+  <section id="dokumentasi" class="gallery fade-in">
+    <h2>Dokumentasi</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="images/wedding (1).jpg" alt="Dokumentasi 1">
+      <img src="images/wedding (2).jpg" alt="Dokumentasi 2">
+      <img src="images/wedding (3).jpg" alt="Dokumentasi 3">
+      <img src="images/wedding (4).jpg" alt="Dokumentasi 4">
+      <img src="images/wedding (5).jpg" alt="Dokumentasi 5">
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="fade-in">
+    <h2>Kontak</h2>
+    <p>Hubungi saya untuk konsultasi gratis:</p>
+    <ul>
+      <li>Email: healme1405g@gmail.com</li>
+      <li>WhatsApp: 087821699780</li>
+      <li>Instagram:@mhr_helmi </li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Helmi Wedding Organizer. Semua hak dilindungi.
+  </footer>
+
+  <script>
+    const fadeIns = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeIns.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

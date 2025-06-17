@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher & Coach - Helmi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="../index.html">&larr; Kembali ke Portfolio</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Students Through Music and Mentorship</h1>
+      <a href="#journey" class="btn-primary">Explore My Journey</a>
+    </div>
+  </section>
+
+  <div class="journey-section">
+    <h2 class="section-title">Tentang Perjalanan Mengajar</h2>
+    <div class="journey-content">
+      <img src="images/Teaching.jpg" alt="Teaching Moment" class="journey-image">
+      <p class="journey-text">
+        Perjalanan saya di dunia mengajar dimulai pada tahun 2018, saat pertama kali menjadi asisten pelatih. Dari sana, saya terus belajar dan berkembang hingga akhirnya dipercaya menjadi pendamping guru di berbagai sekolah. Saya percaya bahwa setiap siswa punya cara belajar yang unik. Karena itu, saya menerapkan pendekatan kognitif yang memudahkan mereka memahami pola, membangun kebiasaan belajar yang efektif, dan tampil percaya diri dalam lomba maupun pentas. Mengajar bukan sekadar mentransfer ilmu—bagi saya, ini tentang menyalakan semangat dan menemani proses tumbuh mereka.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <h2 class="section-title">Daftar Sekolah Tempat Mengajar</h2>
+    <ul class="school-list">
+      <li><strong>SDIT Alyasmin 2</strong> – 2021–2024</li>
+      <li><strong>SD Regina Pacis</strong> – 2018</li>
+      <li><strong>SLB Mekarsari 2 (Tunagrahita)</strong> – 2024</li>
+      <li><strong>SLB B & C Tunas Kasih 2 (Tunagrahita)</strong> – 2024</li>
+      <li><strong>PP Hamalatul Qur'an Al Falakiyah</strong></li>
+      <li><strong>SMPIT Alyasmin 2</strong> – 2021–sekarang</li>
+      <li><strong>SMP Taruna Terpadu</strong> – 2020–2024</li>
+      <li><strong>SMP Yadika Jakarta Barat</strong> – 2021</li>
+      <li><strong>SMA Taruna Terpadu</strong> – 2021–sekarang</li>
+      <li><strong>SMK Taruna Terpadu</strong> – 2021–sekarang</li>
+      <li><strong>MAN 1 Cianjur</strong> – 2023–sekarang</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Dokumentasi Kegiatan</h2>
+    <div class="photo-grid">
+      <img src="images/Latihan1.jpg" alt="Latihan 1" onclick="openLightbox(this)">
+      <img src="images/Latihan2.jpg" alt="Latihan 2" onclick="openLightbox(this)">
+      <img src="images/Latihan3.jpg" alt="Latihan 3" onclick="openLightbox(this)">
+      <img src="images/Latihan4.jpg" alt="Latihan 4" onclick="openLightbox(this)">
+      <img src="images/Tampil1.jpg" alt="Tampil 1" onclick="openLightbox(this)">
+      <img src="images/Tampil2.jpg" alt="Tampil 2" onclick="openLightbox(this)">
+      <img src="images/Tampil3.jpg" alt="Tampil 3" onclick="openLightbox(this)">
+      <img src="images/Tampil4.jpg" alt="Tampil 4" onclick="openLightbox(this)">
+    </div>
+
+    <div class="video-wrapper">
+      <video controls onclick="openVideoModal('videos/pelatihan2023.mp4')">
+        <source src="videos/pelatihan2023.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div id="lightboxModal" class="modal" onclick="closeLightbox()">
+    <img id="lightboxImage" class="modal-content" />
+  </div>
+
+  <div id="videoModal" class="modal" onclick="closeVideoModal()">
+    <video id="modalVideo" class="modal-content" controls></video>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Testimoni</h2>
+    <blockquote>"kak Helmi membantu saya menemukan keberanian tampil di depan umum." – Siswa SMP</blockquote>
+    <blockquote>"Kelas musik jadi lebih menyenangkan dan bermakna." – Orang Tua Murid</blockquote>
+    <blockquote>"kak Helmi selalu punya cara untuk menemukan cara belajar yang baru" – Orang Tua Murid</blockquote>
+  </div>
+
+  <div class="container">
+    <button class="btn-primary" onclick="openModal()">Baca Detail Proyek</button>
+  </div>
+
+<div class="modal" id="projectModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Detail Proyek: Pelatihan Musik Siswa SMA</h2>
+    
+    <!-- PDF ditampilkan di sini -->
+    <iframe 
+      src="doc/learnfromzero.pdf" 
+      width="100%" 
+      height="500px" 
+      style="border: none;">
+    </iframe>
+    
+  </div>
+</div>
+
+
+  <footer>
+    &copy; 2025 Muhamad Helmi Ramadhan
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
